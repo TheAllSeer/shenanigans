@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GETFLIGHT Home</title>
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/Capstone.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>GETFLIGHT</h1>
+      <nav class="nav">
+        <button id="burger">
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <ul class="nav-ul" data-visible="false" aria-expanded="false">
+          <li>
+            <a href="Capstone.html" class="current"><span>HOME</span></a>
+          </li>
+          <li>
+            <a href="CapstoneFAQ.html"><span>FAQ</span></a>
+          </li>
+          <li>
+            <a href="CapstoneGALLERY.html"><span>GALLERY</span></a>
+          </li>
+          <li>
+            <a href=""><span>INFO</span></a>
+          </li>
+          <li>
+            <a href=""><span>MORE</span></a>
+          </li>
+          <li>
+            <a href=""><span>CONTACT US</span></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="primary-booking">
+        <div class="options-buttons">
+          <button class="options active">
+            Round<br />
+            Trip
+          </button>
+          <button class="options">
+            One<br />
+            Way
+          </button>
+          <button class="options">
+            Multi-<br />
+            City
+          </button>
+        </div>
+        <div class="form">
+          <header>
+            <div class="book-white">
+              <h2>Book a Flight</h2>
+            </div>
+          </header>
+
+          <label>
+            From:
+            <input
+              type="text"
+              required
+              list="countries"
+              class="country"
+              name="country"
+          /></label>
+
+          <label>
+            To:
+            <input
+              type="text"
+              required
+              list="countries"
+              class="country"
+              name="country"
+          /></label>
+          <datalist id="countries">
+            <option value="Canada">CAN</option>
+            <option value="New York">NY</option>
+            <option value="Israel">IL</option>
+            <option value="Italy">ITA</option>
+            <option value="France">FR</option>
+          </datalist>
+          <label class="date"
+            >Departure: <input type="date" name="dateInput1"
+          /></label>
+          <label class="date"
+            >Return: <input type="date" name="dateInput2"
+          /></label>
+
+          <label id="passengers"
+            >Passengers:
+            <input required type="number" name="number-input" min="1" max="69"
+          /></label>
+          <label id="coupon-code"
+            >*Coupon Code (if available): <input type="text" name="coupon-code"
+          /></label>
+
+          <input class="find-flight" type="submit" value="Find me a flight!" />
+        </div>
+      </div>
+      <!-- =========================
+        COVID
+      ========================== -->
+      <div class="covid-info">
+        <h2>COVID-19 Information Center</h2>
+        <div class="info-child">
+          <h3>Mask Is Good</h3>
+          <p>
+            Mask is good, wear your mask to ensure you're wearing your mask. Or
+            else, <span class="red-color">I AM IN YOUR WALLS. </span>
+          </p>
+          <img
+            src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/JZFPIZSRRNFA5EJZBINJGZ6HCI.jpg&w=916"
+            alt="doctor"
+          />
+        </div>
+        <div class="info-child">
+          <h3>Extra Care</h3>
+          <p>
+            Scared of COVID? Make sure to bring your
+            <span class="green-color">extra care</span>, since we,
+            <span class="black-color">do not!</span>
+          </p>
+          <img
+            src="https://media.istockphoto.com/photos/cheering-medical-professionals-team-picture-id174866216?k=20&m=174866216&s=612x612&w=0&h=ThaH4tSuX3hk6NBpzVGe0S7_-11mcpGa2dHj_7GQBTs="
+            alt="cheering-doctors"
+          />
+        </div>
+      </div>
+      <!-- end of COVID info center -->
+      <div class="pop-destination">
+        <h2>Book now to NYC</h2>
+      </div>
+
+      <!-- ========================================================== -->
+      <div class="destinations">
+        <img
+          src="https://www.planetware.com/wpimages/2020/05/best-bucket-list-destinations-machu-picchu-peru.jpg"
+          alt="machu-piccu"
+        />
+        <img
+          src="https://www.planetware.com/wpimages/2020/05/best-bucket-list-destinations-pyramids-giza-egypt.jpg"
+          alt="egypt"
+        />
+        <img
+          src="https://www.planetware.com/wpimages/2020/05/best-bucket-list-destinations-taj-mahal-agra-india.jpg"
+          alt="taj-mahal"
+        />
+        <img
+          src="https://www.planetware.com/wpimages/2020/05/best-bucket-list-destinations-iceland-northern-lights.jpg"
+          alt="iceland"
+        />
+        <img
+          src="https://www.planetware.com/wpimages/2020/05/best-bucket-list-destinations-venice-italy.jpg"
+          alt="venice"
+        />
+        <img
+          src="https://th-thumbnailer.cdn-si-edu.com/QAarkR2INIPzhl374yNhHA1aUow=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/a1/88/a188a6f4-143d-4df2-b955-f60e7872b307/gg7p00.jpg"
+          alt="cambodia"
+        />
+      </div>
+    </main>
+    <footer>
+      <section class="footer-links">
+        <ul class="footer-links-ul">
+          <li>
+            <a href=""><i class="fab fa-twitter-square"></i> Twitter</a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-facebook-square"></i> Facebook</a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-instagram"></i> Instagram</a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-google-plus-square"></i> Google+</a>
+          </li>
+        </ul>
+      </section>
+    </footer>
+    <script src="../JS/Capstone.js"></script>
+    <script
+      src="https://kit.fontawesome.com/54dd77cb4e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

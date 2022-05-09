@@ -1,0 +1,463 @@
+* {
+  font-family: Poppins;
+}
+body {
+  background-image: url("https://www.rd.com/wp-content/uploads/2020/01/GettyImages-1131335393-e1580493890249-scaled.jpg");
+  background-size: cover;
+}
+.main-header {
+  background-color: #00032a;
+  color: #f2f2f2;
+  display: block;
+  padding: 0.5%;
+}
+h1 {
+  text-align: center;
+  /* margin: 1rem min(5rem, 25vw); */
+  letter-spacing: 0.1em;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+}
+h2 {
+  text-align: center;
+}
+/*=======================================
+navigation 
+ ======================================*/
+.main-header {
+  z-index: 6969;
+}
+#burger {
+  display: none;
+}
+.nav-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav {
+  background-color: #262630;
+}
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+}
+.nav-ul li {
+  display: inline-block;
+
+  padding: 1%;
+  text-decoration: none;
+  color: #f2f2f2;
+  border: solid 1px #f2f2f2;
+  background-color: #262630;
+}
+.nav-ul a {
+  text-decoration: none;
+  color: #f2f2f2;
+  font-weight: medium;
+}
+.nav-ul li:nth-of-type(4),
+.nav-ul li:nth-of-type(5),
+.nav-ul li:nth-of-type(6) {
+  opacity: 0.5;
+}
+
+@media (min-width: 770.00001px) {
+  .nav-ul li:nth-of-type(6) {
+    margin-left: auto;
+  }
+}
+@media (max-width: 770px) {
+  #burger {
+    position: absolute;
+    display: block;
+    aspect-ratio: 1;
+    top: 2.8rem;
+    right: 1rem;
+    z-index: 9999;
+    color: #f2f2f2;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  input {
+    margin-bottom: 2rem;
+  }
+  .nav-ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    inset: 0 0 0 50%;
+    text-align: center;
+    background-color: #00032a;
+    padding: min(30vh, 10rem) 0 0;
+    background: hsl(0 0% 100% / 0.5);
+    backdrop-filter: blur(1rem);
+    border: solid 2px #00032a;
+    transform: translateX(100%);
+    transition: transform 0.35s ease-in;
+  }
+  .nav-ul[data-visible="true"] {
+    transform: translateX(0%);
+  }
+  .nav-ul a {
+    text-decoration: none;
+    background-color: #00032a;
+    color: #f2f2f2;
+    display: flex;
+    padding: 0.5rem;
+    transition: opacity 0.2s;
+  }
+
+  .nav-ul li {
+    line-height: 2rem;
+    padding-bottom: 0.1rem;
+  }
+  .nav-ul a:hover {
+    opacity: 0.7;
+    border: solid 2px #00032a;
+  }
+
+  .nav-ul li:nth-of-type(6) {
+    margin-top: auto;
+    padding-bottom: 0;
+  }
+}
+
+/* ================================
+STICKY FOOTER
+================================= */
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+}
+
+/* 
+General footer styling
+*/
+footer {
+  background-color: #ffffffc0;
+}
+.footer-links-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+.footer-links-ul a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #00032a;
+}
+@media (min-width: 770px) {
+  .footer-links-ul {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+/* Page 1 - Home*/
+
+/* ===================================
+form options
+=================================== */
+
+.options {
+  background-color: #fff;
+  color: #00032a;
+  display: block;
+  text-align: center;
+  aspect-ratio: 1;
+  width: 3.75rem;
+  text-align: center;
+}
+.options-buttons {
+  display: inline-block;
+  float: left;
+  font-size: 100%;
+}
+.active {
+  background-color: #00032a;
+  color: white;
+  border: solid 0.5px #fff;
+}
+/* ==================================
+form
+================================== */
+label {
+  display: block;
+}
+.primary-booking {
+  margin: 2rem auto;
+  padding: 2.5rem;
+  display: flex;
+}
+@media (min-width: 770px) {
+  .form {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  label {
+    display: inline-block;
+    width: 40%;
+  }
+}
+.form {
+  display: inline-block;
+  background-color: #f2f2f2;
+}
+
+.form input[type="datalist"],
+.form input[type="date"],
+.form input[type="text"] {
+  border: none;
+  border-bottom: solid 0.1rem #707070;
+
+  background-color: #f2f2f2;
+  margin: 1rem auto;
+}
+.form > label {
+  margin: 1rem auto;
+  padding: 1rem auto;
+  text-align: center;
+  font-size: 150%;
+}
+
+.find-flight {
+  border: none;
+  background-color: #2f3a9e;
+  line-height: 70px;
+  color: #fff;
+  margin: 1em auto;
+  border-radius: 0.75rem;
+  padding: 0 2rem;
+  font-size: 150%;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  aspect-ratio: 2/1;
+}
+
+.book-white {
+  background-color: #fff;
+  padding: 0.01rem;
+  border: solid 0.5px #707070;
+  margin: 0;
+}
+
+#passengers > input {
+  width: 4rem;
+  clear: right;
+  display: inline-block;
+  margin: 1rem auto;
+}
+#coupon-code > input {
+  width: 75%;
+}
+
+.country {
+  width: 50%;
+}
+
+/* ===================================================
+COVID 
+=================================================== */
+.covid-info {
+  background-color: #f2f2f2;
+  padding: 1em;
+}
+h3 {
+  text-align: center;
+}
+.covid-info h3 {
+  color: #f28a03;
+  font-size: 1.5rem;
+}
+.red-color {
+  color: #ff0000;
+}
+.green-color {
+  color: #afb500;
+}
+.black-color {
+  color: #000;
+}
+.covid-info p {
+  color: #f28a03;
+  display: flex;
+  width: 40%;
+  display: inline-block;
+  float: left;
+  margin-left: 1rem;
+}
+.covid-info img {
+  width: 40%;
+  display: inline-block;
+  border-radius: 1rem;
+  margin: 1em;
+}
+.info-child {
+  display: block;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+@media (min-width: 770px) {
+  .info-child {
+    display: inline-block;
+    width: 45%;
+  }
+}
+/* ===========
+suggested popular destination
+=========== */
+.pop-destination {
+  display: block;
+  background-image: url("https://www.tripsavvy.com/thmb/sUtl5OaV_xMcwhzObEOe4mP6pB0=/900x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/times-square-at-dusk-534858417-59b71eae798a49c4838c1507ec6bbffb.jpg");
+  /* background-width: 100%; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  color: #f2f2f2;
+  padding: 1rem;
+}
+@media (min-width: 898px) {
+  .pop-destination {
+    background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/12/nye-02.jpg?quality=90&strip=all&w=1488");
+  }
+}
+@media (min-width: 1490px) {
+  .pop-destination {
+    background-image: url("https://www.themusehotel.com/images/1700-960/istock-1202351405-f6b7883d.jpg");
+  }
+}
+@media (min-width: 1696px) {
+  .pop-destination {
+    background-image: url("https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2017/10/03/1143/Hyatt-Centric-Times-Square-New-York-P132-Bar-54-Manhattan-City-View.jpg/Hyatt-Centric-Times-Square-New-York-P132-Bar-54-Manhattan-City-View.16x9.jpg?imwidth=1920");
+  }
+}
+/* ==================
+destinations
+================== */
+.destinations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 3rem;
+}
+.destinations > img {
+  width: 48%;
+  margin: 0 auto;
+  border-radius: 2em;
+  border: solid 2px #f2f2f2;
+  aspect-ratio: 1;
+}
+@media (min-width: 770px) {
+  .destinations > img {
+    width: 30%;
+    aspect-ratio: 16/10;
+  }
+}
+
+/* Page 2 - FAQ */
+
+.question-father {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fdfdfd;
+  color: #00032a;
+  padding: 1rem;
+}
+
+.question-father > h2 {
+  font-size: 2rem;
+}
+.question {
+  flex: 1;
+}
+.question > p {
+  text-align: center;
+}
+
+@media (min-width: 770px) {
+  .question > p,
+  .question > h3 {
+    text-align: left;
+  }
+}
+
+/* Page 3 */
+.gallery-main * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.gallery-main {
+  width: 20rem;
+  border: 5px #fff solid;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+.gallery-images {
+  display: flex;
+  height: 15rem;
+}
+.gallery-images img {
+  width: 27.5rem;
+}
+#gallery-h2 {
+  background-color: #f2f2f2;
+  line-height: 5rem;
+}
+
+#prev-button,
+#next-button {
+  z-index: 10;
+  color: #fff;
+  align-self: center;
+  position: absolute;
+  cursor: pointer;
+}
+#prev-button {
+  left: 0.5em;
+}
+#next-button {
+  right: 0.5em;
+}
+
+@media (min-width: 770px) {
+  .gallery-main {
+    width: 40rem;
+  }
+
+  #prev-button {
+    left: 1em;
+  }
+  #next-button {
+    right: 1em;
+  }
+  .gallery-images {
+    height: 30rem;
+  }
+
+  .gallery-images img {
+    width: 55rem;
+  }
+}
